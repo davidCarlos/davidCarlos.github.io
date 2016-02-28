@@ -5,8 +5,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>David's Blog</title>
+  <meta name="author" content="David Carlos">
 
   
   <meta name="description" content="Esse é o primeiro post deste blog pessoal, e obvimente eu não poderia falar
@@ -22,7 +22,7 @@ de outra coisa, se não a ferramenta que eu mais uso durante o tempo em &hellip;
   <link rel="canonical" href="http://davidcarlos.github.io/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="David's Blog" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -37,9 +37,7 @@ de outra coisa, se não a ferramenta que eu mais uso durante o tempo em &hellip;
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
+  <h1><a href="/">David's Blog</a></h1>
   
 </hgroup>
 
@@ -49,7 +47,7 @@ de outra coisa, se não a ferramenta que eu mais uso durante o tempo em &hellip;
   
 </ul>
   
-<form action="https://www.google.com/search" method="get">
+<form action="https://www.google.com/davidCarlos" method="get">
   <fieldset role="search">
     <input type="hidden" name="sitesearch" value="davidcarlos.github.io">
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
@@ -96,6 +94,23 @@ no pc, o vim. Será um post curto, então vamos ao que interessa.</p>
 é muito chato ter que sair do vim e abrir o arquivo com sudo.</p>
 
 <p><img src="/images/vim1.png"></p>
+
+<p>Edite seu arquivo normalmente, e no momento de salvá-lo, ao invés de sair do vim
+e entrar como sudo (você pode executar o seu
+ultimo comando como sudo apenas fazendo <code>sudo !!</code>), basta fazer:</p>
+
+<pre><code>   :w !sudo tee %
+</code></pre>
+
+<p>O vim pode pedir sua senha de sudo ou salvar automaticamente caso você já tenha usado alguma comando com sudo antes.
+Você pode mapear esse comando no seu vimrc para facilitar na hora de salvar o arquivo.
+No meu vimrc eu fiz o seguinte mapeamento:</p>
+
+<pre><code>    nmap &lt;LEADER&gt;R :w !sudo tee %&lt;CR&gt;
+</code></pre>
+
+<p>Aonde <strong>&lt;LEADER></strong> equivale a virgula, nas minhas configurações.
+Lembrando que para sair do arquivo você irá precisar forçar com <code>:q!</code></p>
 </div>
   
   
@@ -132,7 +147,7 @@ no pc, o vim. Será um post curto, então vamos ao que interessa.</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2016 - Your Name -
+  Copyright &copy; 2016 - David Carlos -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

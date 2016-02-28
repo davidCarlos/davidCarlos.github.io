@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Vim | My Octopress Blog]]></title>
+  <title><![CDATA[Category: Vim | David's Blog]]></title>
   <link href="http://davidcarlos.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://davidcarlos.github.io/"/>
-  <updated>2016-02-27T22:43:50-03:00</updated>
+  <updated>2016-02-27T23:11:24-03:00</updated>
   <id>http://davidcarlos.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[David Carlos]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -26,6 +26,23 @@ no pc, o vim. Será um post curto, então vamos ao que interessa.</p>
 é muito chato ter que sair do vim e abrir o arquivo com sudo.</p>
 
 <p><img src="/images/vim1.png"></p>
+
+<p>Edite seu arquivo normalmente, e no momento de salvá-lo, ao invés de sair do vim
+e entrar como sudo (você pode executar o seu
+ultimo comando como sudo apenas fazendo <code>sudo !!</code>), basta fazer:</p>
+
+<pre><code>   :w !sudo tee %
+</code></pre>
+
+<p>O vim pode pedir sua senha de sudo ou salvar automaticamente caso você já tenha usado alguma comando com sudo antes.
+Você pode mapear esse comando no seu vimrc para facilitar na hora de salvar o arquivo.
+No meu vimrc eu fiz o seguinte mapeamento:</p>
+
+<pre><code>    nmap &lt;LEADER&gt;R :w !sudo tee %&lt;CR&gt;
+</code></pre>
+
+<p>Aonde <strong>&lt;LEADER></strong> equivale a virgula, nas minhas configurações.
+Lembrando que para sair do arquivo você irá precisar forçar com <code>:q!</code></p>
 ]]></content>
   </entry>
   
