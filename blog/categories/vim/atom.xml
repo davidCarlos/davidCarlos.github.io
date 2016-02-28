@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Vim | My Octopress Blog]]></title>
-  <link href="http://yoursite.com/blog/categories/vim/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2016-02-27T22:02:16-03:00</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://davidcarlos.github.io/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://davidcarlos.github.io/"/>
+  <updated>2016-02-27T22:43:50-03:00</updated>
+  <id>http://davidcarlos.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
     
@@ -15,10 +15,17 @@
   
   <entry>
     <title type="html"><![CDATA[Vim: Salvando Arquivos Como Sudo]]></title>
-    <link href="http://yoursite.com/blog/2016/02/27/vim-salvando-arquivos-como-sudo/"/>
+    <link href="http://davidcarlos.github.io/blog/2016/02/27/vim-salvando-arquivos-como-sudo/"/>
     <updated>2016-02-27T21:37:21-03:00</updated>
-    <id>http://yoursite.com/blog/2016/02/27/vim-salvando-arquivos-como-sudo</id>
-    <content type="html"><![CDATA[<h2>Testando Título</h2>
+    <id>http://davidcarlos.github.io/blog/2016/02/27/vim-salvando-arquivos-como-sudo</id>
+    <content type="html"><![CDATA[<p>Esse é o primeiro post deste blog pessoal, e obvimente eu não poderia falar
+de outra coisa, se não a ferramenta que eu mais uso durante o tempo em que estou
+no pc, o vim. Será um post curto, então vamos ao que interessa.</p>
+
+<p>Quando abrimos aquele arquivo que precisa de permissão de root para ser editado,
+é muito chato ter que sair do vim e abrir o arquivo com sudo.</p>
+
+<p><img src="/images/vim1.png"></p>
 ]]></content>
   </entry>
   
