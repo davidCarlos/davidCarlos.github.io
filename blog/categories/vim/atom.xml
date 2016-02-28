@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vim | My Octopress Blog]]></title>
+  <link href="http://yoursite.com/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2016-02-27T22:02:16-03:00</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim: Salvando Arquivos Como Sudo]]></title>
+    <link href="http://yoursite.com/blog/2016/02/27/vim-salvando-arquivos-como-sudo/"/>
+    <updated>2016-02-27T21:37:21-03:00</updated>
+    <id>http://yoursite.com/blog/2016/02/27/vim-salvando-arquivos-como-sudo</id>
+    <content type="html"><![CDATA[<h2>Testando Título</h2>
+]]></content>
+  </entry>
+  
+</feed>
