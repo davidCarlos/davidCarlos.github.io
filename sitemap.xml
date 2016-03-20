@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://davidcarlos.github.io/blog/2016/03/17/meu-primeiro-pacote-no-debian/</loc>
+<lastmod>2016-03-17T14:26:45-03:00</lastmod>
+</url>
+<url>
 <loc>http://davidcarlos.github.io/blog/2016/02/27/vim-salvando-arquivos-como-sudo/</loc>
 <lastmod>2016-02-27T21:37:21-03:00</lastmod>
 </url>
@@ -15,5 +19,14 @@
 </url>
 <url>
 <loc>http://davidcarlos.github.io/blog/categories/tips/</loc>
+</url>
+<url>
+<loc>http://davidcarlos.github.io/blog/categories/packing/</loc>
+</url>
+<url>
+<loc>http://davidcarlos.github.io/blog/categories/devops/</loc>
+</url>
+<url>
+<loc>http://davidcarlos.github.io/blog/categories/debian/</loc>
 </url>
 </urlset>
