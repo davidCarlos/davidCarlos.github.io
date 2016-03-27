@@ -9,8 +9,8 @@
   <meta name="author" content="David Carlos">
 
   
-  <meta name="description" content="Quando abrimos nosso terminal e digitamos sudo apt-get install mutt, estamos
-dizendo para o Debian, que queremos instalar um pacote chamado mutt &hellip;">
+  <meta name="description" content="Muitas vezes, ao tentarmos montar um pendrive, temos alguns problemas no linux.
+Um desses problemas é o SO não reconhecer o pendrive no momento em &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,71 @@ dizendo para o Debian, que queremos instalar um pacote chamado mutt &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/">Preparando Montangem De Pendrive Pelo Arquivo Fstab</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-03-27T19:10:02-03:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:10 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Muitas vezes, ao tentarmos montar um pendrive, temos alguns problemas no linux.
+Um desses problemas é o SO não reconhecer o pendrive no momento em que inserimos
+o pendrive no pc. Uma forma de listar quais sistemas de arquivo estão montados
+e em que diretório foram montados é utilizando o comando <code>mount</code>. O problema é que
+se o linux não reconheceu o pendrive automaticamente, quando executarmos o comando
+<code>mount</code>, nosso pendrive não será listado. Um forma(não a melhor forma, devo deixar isso
+bem claro) de contornar esse problema é montar o pendrive manualmente. Para isso iremos
+utilizar o comando <code>blkid</code>. Esse comando irá nos mostrar os <code>block devices</code>.</p>
+
+<p><code>Block devices</code> são os dispositivos, no linux, que guardam dados, um pendrive por exemplo.
+Quando executamos o comando <code>blkid</code>, iremos visualizar o seguinte:</p>
+
+<p><img src="/images/blkid.png"></p>
+
+<p>Agora ficou fácil, pois o comando <code>blkid</code> nos mostra o UUID do dispositivo. O <code>UUID</code> é um
+identificador único para cada sistema de arquivos mantidos pelos <code>block devices</code>.</p>
+
+<p>No arquivo /etc/fstab adicionamos a linha</p>
+
+<pre><code>UUID=D488-3B7E /media/david vfat defaults
+</code></pre>
+
+<p>O primeiro argumento não precisa ser explicado, o segundo argumento é o diretório em que
+o <code>block devices</code> será montado, e o terceiro argumento o define o tipo do sistema de arquivos.</p>
+
+<p>Agora para montar o pendrive, basta fazer</p>
+
+<pre><code> # mount /dev/sdb1
+</code></pre>
+
+<p>Nesse caso usamos /dev/sdb1 pois foi o que o comando blkid printou na tela, mas poderia
+ser outro dispositivo.</p>
+
+<p>Devo ressaltar que esse procedimento deve ser feito com cuidado e em ultimo caso, pois
+ao adicionar um novo ponto de montagem no arquivo <code>/etc/fstab</code>, no momento em que a máquina
+for iniciada, o kernel irá tentar montar esse device, e caso o pendrive não esteja conectado
+na máquina, o sistema não irá inicializar corretamente.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -227,6 +292,10 @@ Lembrando que para sair do arquivo você irá precisar forçar com <code>:q!</co
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/">Preparando Montangem De Pendrive Pelo Arquivo Fstab</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/03/17/meu-primeiro-pacote-no-debian/">Debian: Fazendo Meu Primeiro Pacote - Parte 1</a>
