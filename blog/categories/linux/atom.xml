@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Linux | David's Blog]]></title>
+  <title><![CDATA[Category: linux | David's Blog]]></title>
   <link href="http://davidcarlos.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://davidcarlos.github.io/"/>
-  <updated>2016-03-27T19:54:02-03:00</updated>
+  <updated>2016-03-27T20:07:52-03:00</updated>
   <id>http://davidcarlos.github.io/</id>
   <author>
     <name><![CDATA[David Carlos]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Preparando Montangem De Pendrive Pelo Arquivo Fstab]]></title>
+    <title type="html"><![CDATA[Preparando montangem de pendrive pelo arquivo fstab]]></title>
     <link href="http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/"/>
     <updated>2016-03-27T19:10:02-03:00</updated>
     <id>http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab</id>
