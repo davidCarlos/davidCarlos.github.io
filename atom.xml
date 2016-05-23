@@ -4,7 +4,7 @@
   <title><![CDATA[David's Blog]]></title>
   <link href="http://davidcarlos.github.io/atom.xml" rel="self"/>
   <link href="http://davidcarlos.github.io/"/>
-  <updated>2016-04-27T22:57:33-03:00</updated>
+  <updated>2016-05-23T15:52:08-03:00</updated>
   <id>http://davidcarlos.github.io/</id>
   <author>
     <name><![CDATA[David Carlos]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Preparando montangem de pendrive pelo arquivo fstab]]></title>
+    <title type="html"><![CDATA[Preparando Montangem De Pendrive Pelo Arquivo Fstab]]></title>
     <link href="http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/"/>
     <updated>2016-03-27T19:10:02-03:00</updated>
     <id>http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab</id>
@@ -59,7 +59,7 @@ na máquina, o sistema não irá inicializar corretamente.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Debian: Fazendo meu primeiro pacote - Parte 1]]></title>
+    <title type="html"><![CDATA[Debian: Fazendo Meu Primeiro Pacote - Parte 1]]></title>
     <link href="http://davidcarlos.github.io/blog/2016/03/17/meu-primeiro-pacote-no-debian/"/>
     <updated>2016-03-17T14:26:45-03:00</updated>
     <id>http://davidcarlos.github.io/blog/2016/03/17/meu-primeiro-pacote-no-debian</id>
@@ -137,7 +137,7 @@ Se tudo der certo teremos, um diretório acima do diretório raiz do source, um 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Vim: Salvando arquivos como sudo]]></title>
+    <title type="html"><![CDATA[Vim: Salvando Arquivos Como Sudo]]></title>
     <link href="http://davidcarlos.github.io/blog/2016/02/27/vim-salvando-arquivos-como-sudo/"/>
     <updated>2016-02-27T21:37:21-03:00</updated>
     <id>http://davidcarlos.github.io/blog/2016/02/27/vim-salvando-arquivos-como-sudo</id>
