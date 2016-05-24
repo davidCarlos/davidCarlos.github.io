@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Debian | David's Blog]]></title>
   <link href="http://davidcarlos.github.io/blog/categories/debian/atom.xml" rel="self"/>
   <link href="http://davidcarlos.github.io/"/>
-  <updated>2016-05-23T15:52:08-03:00</updated>
+  <updated>2016-05-23T21:03:12-03:00</updated>
   <id>http://davidcarlos.github.io/</id>
   <author>
     <name><![CDATA[David Carlos]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Configurando Znc Server + Xchat]]></title>
+    <link href="http://davidcarlos.github.io/blog/2016/05/23/configurando-znc-server-plus-xchat/"/>
+    <updated>2016-05-23T16:30:20-03:00</updated>
+    <id>http://davidcarlos.github.io/blog/2016/05/23/configurando-znc-server-plus-xchat</id>
+    <content type="html"><![CDATA[<p>Por muito tempo eu fiz uso do cliente de irc weechat para conectar em servidores como o freenode, e interagir com as comunidades de SL. Infelizmente a infra da minha faculdade, bloqueia portas altas, inclusive a porta <code>6667</code>, que é a porta em que o freenode aceita requisições. Uma alternativa que encontrei, foi dentro de uma VM na digital ocean, executar uma seção do tmux, e dentro dessa sessão executar o weechat. Para acessar o irc eu fazia:</p>
+
+<pre><code>    ssh david@&lt;ip_da_minha_vm&gt; -t 'tmux attach; bash -l'
+</code></pre>
+
+<p>Isso me permitia acessar o freenode, e outros servers(como o oftc), por fora da rede da minha faculdade, além de me manter sempre conectado nos canais do irc, uma vez que a seção do tmux fica sempre aberta, enquanto você não a fecha. Esse  <em>workaround</em> me permitiu ficar sempre online no irc, além de conseguir usar o weechat de dentro da infra porca da minha faculdade.</p>
+
+<p>Com o tempo, essa solução se mostrou bem amadora, e por indicação de um amigo, comecei a usar o glorioso <code>znc</code>.</p>
+
+<p>Bouncer é um conceito similar a um proxy. Você acessa ao bouncer com o seu ip, e ele acessa determinado serviço na internet com o ip do servidor aonde ele(o bouncer) está sendo executado. No contexto de servidores irc isso é muito útil, porquê o bouncer sempre ficará online, mesmo que o cliente encerre a requisição. O znc é construido em cima desse conceito, mas te permite fazer diversas configurações a mais, que simplesmente rodar um weechat dentro de uma seção do tmux não permite.</p>
+
+<p><img src="/images/bouncer.png"></p>
+
+<p>A configuração do znc é muito simples, com um comando você realiza toda a configuração, instala modulos, adiciona canais e servidores, cria usuários no servidore gerencia suas permissões, entre diversas outras coisas.</p>
+
+<pre><code>    znc --makeconf
+</code></pre>
+
+<p>Durante essa configuração eu recomendo adicionar o módulo webadmin, que permite gerenciar todas as configurações do znc pelo browser.</p>
+
+<p>Com o znc, o cliente de irc que você tiver usando(no meu caso o xchat), não precisará fazer configuração nenhuma, tudo é feito via znc. A unica coisa que o cliente precisa fazer, é mandar as credênciais de acesso, para poder usar o znc. Em resumo o cliente conecta no znc, e o znc conecta nos servidores irc.</p>
+
+<h2>Configurando o cliente</h2>
+
+<p>Para acessar n redes irc(freenode e oftc por exemplo) você precisará fazer n requisições a essas determinadas redes. No xchat você pode definir em quais redes o cliente vai seconectar quando a aplicação iniciar. No meu caso eu defini duas redes, o <code>znc-oftc</code> e o <code>znc-freenode</code>. Ambos conectam no mesmo servidor znc, a diferença está no momento de passar as credenciais para o servidor.</p>
+
+<p>O gif abaixo mostra como definir no xchat o endereço e a porta do znc. Essa configuração é a mesma para as duas redes.
++<img src="http://i.makeagif.com/media/5-23-2016/JT_CRT.gif" alt="" /></p>
+
+<p>Mas se em ambas as redes, conectamos no mesmo servidor, e na mesma porta, como o znc vai saber que a rede znc-oftc(definida no xchat) tem que ser redirecionada para o servidor <code>irc.oftc.net</code> ? O xchat, dentro das configurações de uma rede, possui o campo <em>password do servidor</em>. É nesse campo que você irá informar o nome do usuário(que foi definida na configuração do znc), a rede que esse usuário quer acessar e a senha desse usuário.</p>
+
+<pre><code>    Ex: davidCarlos/oftc:12345abcd
+</code></pre>
+
+<p>Isso é expecífico para o xchat, em outros clientes essa configuração pode mudar.</p>
+
+<p>Dessa forma, quando você inicializar o xchat, ele irá conectar no znc, informando o usuário, a sua senha e em para qual rede esse acesso deve ser redirecionado. É no znc que você irá configurar o endereço do servidor oftc, e a porta, e <strong>não no cliente</strong>.</p>
+
+<h2>WebAdmin</h2>
+
+<p>Para configurar o znc via navegador, basta acessar <strong>o ip do servidor aonde o znc está rodando</strong>/<strong>a porta que você definiu no makeconf</strong></p>
+
+<p>Lembre-se que para fazer esse acesso, você precisa habilitar o modulo do webadmin durante a configuração do znc.</p>
+
+<p>OBS: O znc não necessariamente precisa executar no intervalo de portas que é informado no momento do makeconf. No meu caso, o meu znc roda na porta 8081, justamente porque a infra da minha faculdade, bloqueia a saida de pacotes por portas altas.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Preparando Montangem De Pendrive Pelo Arquivo Fstab]]></title>
