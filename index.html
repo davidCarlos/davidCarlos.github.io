@@ -98,18 +98,18 @@
 
 <p><img src="/images/bouncer.png"></p>
 
-<p>A configuração do znc é muito simples, com um comando você realiza toda a configuração, instala modulos, adiciona canais e servidores, cria usuários no servidore gerencia suas permissões, entre diversas outras coisas.</p>
+<p>A configuração do znc é muito simples, com um comando você realiza toda a configuração, instala modulos, adiciona canais e servidores, cria usuários no servidor e gerencia suas permissões, entre diversas outras coisas.</p>
 
 <pre><code>    znc --makeconf
 </code></pre>
 
-<p>Durante essa configuração eu recomendo adicionar o módulo webadmin, que permite gerenciar todas as configurações do znc pelo browser.</p>
+<p>Durante essa configuração eu recomendo adicionar o módulo <code>webadmin</code>, que permite gerenciar todas as configurações do znc pelo browser.</p>
 
 <p>Com o znc, o cliente de irc que você tiver usando(no meu caso o xchat), não precisará fazer configuração nenhuma, tudo é feito via znc. A unica coisa que o cliente precisa fazer, é mandar as credênciais de acesso, para poder usar o znc. Em resumo o cliente conecta no znc, e o znc conecta nos servidores irc.</p>
 
 <h2>Configurando o cliente</h2>
 
-<p>Para acessar n redes irc(freenode e oftc por exemplo) você precisará fazer n requisições a essas determinadas redes. No xchat você pode definir em quais redes o cliente vai seconectar quando a aplicação iniciar. No meu caso eu defini duas redes, o <code>znc-oftc</code> e o <code>znc-freenode</code>. Ambos conectam no mesmo servidor znc, a diferença está no momento de passar as credenciais para o servidor.</p>
+<p>Para acessar n redes irc(freenode e oftc por exemplo) você precisará fazer n requisições a essas determinadas redes. No xchat você pode definir em quais redes o cliente vai se conectar quando a aplicação iniciar. No meu caso eu defini duas redes, o <code>znc-oftc</code> e o <code>znc-freenode</code>. Ambos conectam no mesmo servidor znc, a diferença está no momento de passar as credenciais para o servidor.</p>
 
 <p>O gif abaixo mostra como definir no xchat o endereço e a porta do znc. Essa configuração é a mesma para as duas redes.
 +<img src="http://i.makeagif.com/media/5-23-2016/JT_CRT.gif" alt="" /></p>
@@ -121,13 +121,15 @@
 
 <p>Isso é expecífico para o xchat, em outros clientes essa configuração pode mudar.</p>
 
-<p>Dessa forma, quando você inicializar o xchat, ele irá conectar no znc, informando o usuário, a sua senha e em para qual rede esse acesso deve ser redirecionado. É no znc que você irá configurar o endereço do servidor oftc, e a porta, e <strong>não no cliente</strong>.</p>
+<p>Dessa forma, quando você inicializar o xchat, ele irá conectar no znc, informando o usuário, a sua senha e em para qual rede esse acesso deve ser redirecionado. É no znc que você irá configurar o ip e a porta do servidor oftc, e <strong>não no cliente</strong>.</p>
 
 <h2>WebAdmin</h2>
 
-<p>Para configurar o znc via navegador, basta acessar <strong>o ip do servidor aonde o znc está rodando</strong>/<strong>a porta que você definiu no makeconf</strong></p>
+<p>Para configurar o znc via navegador, basta acessar <strong>o ip do servidor aonde o znc está rodando</strong>:<strong>a porta que você definiu no makeconf</strong></p>
 
 <p>Lembre-se que para fazer esse acesso, você precisa habilitar o modulo do webadmin durante a configuração do znc.</p>
+
+<p>Como o znc permite que você adicione vários usuários ao servidor, as possibilidades de uso se estendem para organizações e empresas que querem definir uma configuração padrão de acesso a servidores irc para todos os usuários. O funcionário só precisa conectar no no ip/rede que lhe é de interesse, e todas as configurações(modulos adicionais, scripts, permissões) estarão centralizadas em um único lugar.</p>
 
 <p>OBS: O znc não necessariamente precisa executar no intervalo de portas que é informado no momento do makeconf. No meu caso, o meu znc roda na porta 8081, justamente porque a infra da minha faculdade, bloqueia a saida de pacotes por portas altas.</p>
 </div>
