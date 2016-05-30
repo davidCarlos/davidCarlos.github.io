@@ -9,7 +9,8 @@
   <meta name="author" content="David Carlos">
 
   
-  <meta name="description" content="Por muito tempo eu fiz uso do cliente de irc weechat para conectar em servidores como o freenode, e interagir com as comunidades de SL. Infelizmente &hellip;">
+  <meta name="description" content="Buscando melhorar minhas habilidades como programador ruby, resolvi procurar algum projeto
+opensource no github, que fosse útil pra mim de alguma &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -63,6 +64,74 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/05/30/contribuindo-com-projetos-open-source/">Contribuindo Com Projetos Open Source</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-05-30T13:02:58-03:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:02 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Buscando melhorar minhas habilidades como programador ruby, resolvi procurar algum projeto
+opensource no github, que fosse útil pra mim de alguma forma, e que fosse usado por um bom número de pessoas.
+Infelizmente, não encontrei nenhum projeto que não fosse tão grande quanto o Rails, ou tão pequeno que ninguém
+da comunidade ruby realmente usasse, então acabei desistindo da ideia. Um dia, acompanhando o canal de ruby
+do debian no irc, percebi que alguém havia empacotado o ruby-ghi para a unstable, e por curiosidade fui atrás
+do projeto usado como upstream para o pacote.</p>
+
+<p>Ghi(<a href="https://github.com/stephencelis/ghi">https://github.com/stephencelis/ghi</a>) é uma gem ruby, que se comunica com a api do github,
+e permite gerenciar várias features disponibilizadas pelo github, via terminal. Entre essas features temos:</p>
+
+<pre><code>    - Listagem de issues
+    - Listagem de milestones
+    - Abrir/Fechar issues
+    - Abrir/Fechar milestones
+    - Editar issues existentes
+    - Assinar issues para alguém, ou para si mesmo
+</code></pre>
+
+<p>Achei o projeto muito interessante, com um código não tão grande assim, e várias issues relativamente fáceis de serem
+resolvidas.</p>
+
+<p>A issue que eu escolhi para resolver foi, ao listar as issues de determinado repositório, filtrá-las por milestone:</p>
+
+<p><img src="/images/ghi1.png"></p>
+
+<p>O maior benefício de contribuir com projetos open source, além de você poder usar essas contribuições no seu currículo,
+é o ganho que você terá como programador. Uma issue simples como essa que eu peguei para resolver, me fez estudar vários
+conceitos de ruby que eu não dominava, ou usava sem saber muito o porque(blocks por exemplo). Além de estudar a própria
+linguagem, projetos open source te mostram outras maneiras de resolver um mesmo problema, ou seja, te trazem visão crítica
+e te permitem perceber que nem sempre apenas funcionar é o bastante, principalmente quando se trata de projetos com vários
+contribuidores, que constantemente vão ler o código de outros desenvolvedores. Manutenibilidade deve ser algo primordial em
+projetos open source.</p>
+
+<p>O pull request que enviei <a href="https://github.com/stephencelis/ghi/pull/301">https://github.com/stephencelis/ghi/pull/301</a></p>
+
+<p>O ghi, apesar de ser um projeto com um tamanho de código fonte médio, não possui testes. Iniciei uma discussão(<a href="https://github.com/stephencelis/ghi/issues/302">https://github.com/stephencelis/ghi/issues/302</a>) no repositório sobre essa ausência de testes,e o quanto isso é prejudicial pra evolução do projeto. Espero
+que em breve possamos adicionar uma boa cobertura de testes para o ghi.</p>
+
+<p>O meu objetivo é encontrar outros projetos opensource para contribuir, e sempre buscar melhorar minhas habilidades
+como programador.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -368,6 +437,10 @@ Lembrando que para sair do arquivo você irá precisar forçar com <code>:q!</co
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/05/30/contribuindo-com-projetos-open-source/">Contribuindo Com Projetos Open Source</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/05/23/configurando-znc-server-plus-xchat/">Configurando Znc Server + Xchat</a>
       </li>
     
@@ -402,6 +475,19 @@ Lembrando que para sair do arquivo você irá precisar forçar com <code>:q!</co
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'davidstechblog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

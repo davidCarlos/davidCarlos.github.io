@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://davidcarlos.github.io/blog/2016/05/30/contribuindo-com-projetos-open-source/</loc>
+<lastmod>2016-05-30T13:02:58-03:00</lastmod>
+</url>
+<url>
 <loc>http://davidcarlos.github.io/blog/2016/05/23/configurando-znc-server-plus-xchat/</loc>
 <lastmod>2016-05-23T16:30:20-03:00</lastmod>
 </url>
@@ -48,5 +52,14 @@
 </url>
 <url>
 <loc>http://davidcarlos.github.io/blog/categories/linux/</loc>
+</url>
+<url>
+<loc>http://davidcarlos.github.io/blog/categories/code/</loc>
+</url>
+<url>
+<loc>http://davidcarlos.github.io/blog/categories/ruby/</loc>
+</url>
+<url>
+<loc>http://davidcarlos.github.io/blog/categories/opensource/</loc>
 </url>
 </urlset>

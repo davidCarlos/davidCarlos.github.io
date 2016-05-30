@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Preparando Montangem De Pendrive Pelo Arquivo Fstab - David's Blog</title>
+  <title>Contribuindo Com Projetos Open Source - David's Blog</title>
   <meta name="author" content="David Carlos">
 
   
-  <meta name="description" content="Muitas vezes, ao tentarmos montar um pendrive, temos alguns problemas no linux.
-Um desses problemas é o SO não reconhecer o pendrive no momento em &hellip;">
+  <meta name="description" content="Buscando melhorar minhas habilidades como programador ruby, resolvi procurar algum projeto
+opensource no github, que fosse útil pra mim de alguma &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ Um desses problemas é o SO não reconhecer o pendrive no momento em &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/">
+  <link rel="canonical" href="http://davidcarlos.github.io/blog/2016/05/30/contribuindo-com-projetos-open-source/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="David's Blog" type="application/atom+xml">
@@ -67,7 +67,7 @@ Um desses problemas é o SO não reconhecer o pendrive no momento em &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Preparando Montangem De Pendrive Pelo Arquivo Fstab</h1>
+      <h1 class="entry-title">Contribuindo Com Projetos Open Source</h1>
     
     
       <p class="meta">
@@ -76,50 +76,53 @@ Um desses problemas é o SO não reconhecer o pendrive no momento em &hellip;">
 
 
 
-<time class='entry-date' datetime='2016-03-27T19:10:02-03:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:10 pm</span></time>
+<time class='entry-date' datetime='2016-05-30T13:02:58-03:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:02 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Muitas vezes, ao tentarmos montar um pendrive, temos alguns problemas no linux.
-Um desses problemas é o SO não reconhecer o pendrive no momento em que inserimos
-o pendrive no pc. Uma forma de listar quais sistemas de arquivo estão montados
-e em que diretório foram montados é utilizando o comando <code>mount</code>. O problema é que
-se o linux não reconheceu o pendrive automaticamente, quando executarmos o comando
-<code>mount</code>, nosso pendrive não será listado. Um forma(não a melhor forma, devo deixar isso
-bem claro) de contornar esse problema é montar o pendrive manualmente. Para isso iremos
-utilizar o comando <code>blkid</code>. Esse comando irá nos mostrar os <code>block devices</code>.</p>
+<div class="entry-content"><p>Buscando melhorar minhas habilidades como programador ruby, resolvi procurar algum projeto
+opensource no github, que fosse útil pra mim de alguma forma, e que fosse usado por um bom número de pessoas.
+Infelizmente, não encontrei nenhum projeto que não fosse tão grande quanto o Rails, ou tão pequeno que ninguém
+da comunidade ruby realmente usasse, então acabei desistindo da ideia. Um dia, acompanhando o canal de ruby
+do debian no irc, percebi que alguém havia empacotado o ruby-ghi para a unstable, e por curiosidade fui atrás
+do projeto usado como upstream para o pacote.</p>
 
-<p><code>Block devices</code> são os dispositivos, no linux, que guardam dados, um pendrive por exemplo.
-Quando executamos o comando <code>blkid</code>, iremos visualizar o seguinte:</p>
+<p>Ghi(<a href="https://github.com/stephencelis/ghi">https://github.com/stephencelis/ghi</a>) é uma gem ruby, que se comunica com a api do github,
+e permite gerenciar várias features disponibilizadas pelo github, via terminal. Entre essas features temos:</p>
 
-<p><img src="/images/blkid.png"></p>
-
-<p>Agora ficou fácil, pois o comando <code>blkid</code> nos mostra o UUID do dispositivo. O <code>UUID</code> é um
-identificador único para cada sistema de arquivos mantidos pelos <code>block devices</code>.</p>
-
-<p>No arquivo /etc/fstab adicionamos a linha</p>
-
-<pre><code>UUID=D488-3B7E /media/david vfat defaults
+<pre><code>    - Listagem de issues
+    - Listagem de milestones
+    - Abrir/Fechar issues
+    - Abrir/Fechar milestones
+    - Editar issues existentes
+    - Assinar issues para alguém, ou para si mesmo
 </code></pre>
 
-<p>O primeiro argumento não precisa ser explicado, o segundo argumento é o diretório em que
-o <code>block devices</code> será montado, e o terceiro argumento o define o tipo do sistema de arquivos.</p>
+<p>Achei o projeto muito interessante, com um código não tão grande assim, e várias issues relativamente fáceis de serem
+resolvidas.</p>
 
-<p>Agora para montar o pendrive, basta fazer</p>
+<p>A issue que eu escolhi para resolver foi, ao listar as issues de determinado repositório, filtrá-las por milestone:</p>
 
-<pre><code> # mount /dev/sdb1
-</code></pre>
+<p><img src="/images/ghi1.png"></p>
 
-<p>Nesse caso usamos /dev/sdb1 pois foi o que o comando blkid printou na tela, mas poderia
-ser outro dispositivo.</p>
+<p>O maior benefício de contribuir com projetos open source, além de você poder usar essas contribuições no seu currículo,
+é o ganho que você terá como programador. Uma issue simples como essa que eu peguei para resolver, me fez estudar vários
+conceitos de ruby que eu não dominava, ou usava sem saber muito o porque(blocks por exemplo). Além de estudar a própria
+linguagem, projetos open source te mostram outras maneiras de resolver um mesmo problema, ou seja, te trazem visão crítica
+e te permitem perceber que nem sempre apenas funcionar é o bastante, principalmente quando se trata de projetos com vários
+contribuidores, que constantemente vão ler o código de outros desenvolvedores. Manutenibilidade deve ser algo primordial em
+projetos open source.</p>
 
-<p>Devo ressaltar que esse procedimento deve ser feito com cuidado e em ultimo caso, pois
-ao adicionar um novo ponto de montagem no arquivo <code>/etc/fstab</code>, no momento em que a máquina
-for iniciada, o kernel irá tentar montar esse device, e caso o pendrive não esteja conectado
-na máquina, o sistema não irá inicializar corretamente.</p>
+<p>O pull request que enviei <a href="https://github.com/stephencelis/ghi/pull/301">https://github.com/stephencelis/ghi/pull/301</a></p>
+
+<p>O ghi, apesar de ser um projeto com um tamanho de código fonte médio, não possui testes. Iniciei uma discussão(<a href="https://github.com/stephencelis/ghi/issues/302">https://github.com/stephencelis/ghi/issues/302</a>) no repositório sobre essa ausência de testes,e o quanto isso é prejudicial pra evolução do projeto. Espero
+que em breve possamos adicionar uma boa cobertura de testes para o ghi.</p>
+
+<p>O meu objetivo é encontrar outros projetos opensource para contribuir, e sempre buscar melhorar minhas habilidades
+como programador.</p>
 </div>
 
 
@@ -135,12 +138,12 @@ na máquina, o sistema não irá inicializar corretamente.</p>
 
 
 
-<time class='entry-date' datetime='2016-03-27T19:10:02-03:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:10 pm</span></time>
+<time class='entry-date' datetime='2016-05-30T13:02:58-03:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:02 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/debian/'>debian</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/tips/'>tips</a>
+    <a class='category' href='/blog/categories/code/'>code</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
   
 </span>
 
@@ -149,7 +152,7 @@ na máquina, o sistema não irá inicializar corretamente.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/" data-via="" data-counturl="http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://davidcarlos.github.io/blog/2016/05/30/contribuindo-com-projetos-open-source/" data-via="" data-counturl="http://davidcarlos.github.io/blog/2016/05/30/contribuindo-com-projetos-open-source/" >Tweet</a>
   
   
   
@@ -158,10 +161,8 @@ na máquina, o sistema não irá inicializar corretamente.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/03/17/meu-primeiro-pacote-no-debian/" title="Previous Post: Debian: Fazendo meu primeiro pacote - Parte 1">&laquo; Debian: Fazendo meu primeiro pacote - Parte 1</a>
+        <a class="basic-alignment left" href="/blog/2016/05/23/configurando-znc-server-plus-xchat/" title="Previous Post: Configurando znc server + xchat">&laquo; Configurando znc server + xchat</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/05/23/configurando-znc-server-plus-xchat/" title="Next Post: Configurando znc server + xchat">Configurando znc server + xchat &raquo;</a>
       
     </p>
   </footer>
@@ -227,8 +228,8 @@ na máquina, o sistema não irá inicializar corretamente.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/';
-        var disqus_url = 'http://davidcarlos.github.io/blog/2016/03/27/preparando-montangem-de-pendrive-pelo-arquivo-fstab/';
+        var disqus_identifier = 'http://davidcarlos.github.io/blog/2016/05/30/contribuindo-com-projetos-open-source/';
+        var disqus_url = 'http://davidcarlos.github.io/blog/2016/05/30/contribuindo-com-projetos-open-source/';
         var disqus_script = 'embed.js';
       
     (function () {
